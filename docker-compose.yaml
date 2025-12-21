@@ -1,0 +1,14 @@
+services:
+  php:
+    build: .
+    container_name: watson_en_symfony
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+      - ./var:/var/www/html/var  # Monter le dossier var séparément pour s'assurer qu'il existe
+    ports:
+      - "8080:80"
+    environment:
+      - APP_ENV=dev
+      # Vous pouvez aussi définir DATABASE_URL ici si vous préférez
+      # - DATABASE_URL=sqlite:///%kernel.project_dir%/var/data.db
