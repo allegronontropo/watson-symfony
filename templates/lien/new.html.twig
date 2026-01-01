@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Lien{% endblock %}
+{% block title %}Ajouter un lien{% endblock %}
 
 {% block body %}
-    <h1>Create new Lien</h1>
+    <h1>Ajouter un lien</h1>
 
-    {{ include('lien/_form.html.twig') }}
+    <p>Remplis les champs ci-dessous pour enregistrer un nouveau lien.</p>
 
-    <a href="{{ path('app_lien_index') }}">back to list</a>
+    {{ include('lien/_form.html.twig', { button_label: 'Créer' }) }}
+    
+    <br>
+    
+    <a href="{{ path('app_lien_index') }}" class="btn btn-secondary">
+        ← Retour à la liste
+    </a>
 {% endblock %}

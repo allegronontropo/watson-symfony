@@ -1,13 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Lien{% endblock %}
+{% block title %}Modifier un lien{% endblock %}
 
 {% block body %}
-    <h1>Edit Lien</h1>
+    <h1>Modifier le lien</h1>
 
-    {{ include('lien/_form.html.twig', {'button_label': 'Update'}) }}
+    <p>Modifie les informations du lien puis enregistre les changements.</p>
 
-    <a href="{{ path('app_lien_index') }}">back to list</a>
+    {{ include('lien/_form.html.twig', { button_label: 'Mettre à jour' }) }}
+    
+    <br>
 
-    {{ include('lien/_delete_form.html.twig') }}
+    <a href="{{ path('app_lien_index') }}" class="btn btn-secondary">
+        ← Retour à la liste
+    </a>
 {% endblock %}

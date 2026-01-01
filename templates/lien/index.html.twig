@@ -1,39 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Lien index{% endblock %}
+{% block title %}Liste des liens{% endblock %}
 
 {% block body %}
-    <h1>Lien index</h1>
+    <h1>Liste des liens</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Url</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for lien in liens %}
-            <tr>
-                <td>{{ lien.id }}</td>
-                <td>{{ lien.titre }}</td>
-                <td>{{ lien.url }}</td>
-                <td>{{ lien.description }}</td>
-                <td>
-                    <a href="{{ path('app_lien_show', {'id': lien.id}) }}">show</a>
-                    <a href="{{ path('app_lien_edit', {'id': lien.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_lien_new') }}">Create new</a>
+    {% if liens is empty %}
+        <p>Aucun lien n’a encore été ajouté.</p>
+    {% else %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>URL</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for lien in liens %}
+                <tr>
+                    <td>{{ lien.titre }}</td>
+                    <td>
+                        <a href="{{ lien.url }}" target="_blank">
+                            {{ lien.url }}
+                        </a>
+                    </td>
+                    <td>{{ lien.description }}</td>
+                    <td>
+                        <a href="{{ path('app_lien_show', {id: lien.id}) }}" class="btn btn-primary">
+                            Voir
+                        </a>
+                        <a href="{{ path('app_lien_edit', {id: lien.id}) }}" class="btn btn-secondary">
+                            Modifier
+                        </a>
+                        {{ include('lien/_delete_form.html.twig') }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    <br>
+    <a href="{{ path('app_lien_new') }}" class="btn btn-primary">
+        ➕ Ajouter un lien
+    </a>
 {% endblock %}

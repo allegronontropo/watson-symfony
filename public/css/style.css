@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #333
+}
+
+nav {
+    background: #2c3e50;
+    padding: 12px 20px
+}
+
+nav a {
+    color: #fff;
+    margin-right: 15px;
+    font-weight: bold;
+    text-decoration: none
+}
+
+nav a:hover {
+    text-decoration: underline
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08)
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: #222
+}
+
+h1 {
+    margin-bottom: 20px
+}
+
+h2 {
+    margin-bottom: 15px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left
+}
+
+th {
+    background: #f0f0f0
+}
+
+tr:hover {
+    background: #f9f9f9
+}
+
+.btn {
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block
+}
+
+.btn-primary {
+    background: #3498db;
+    color: #fff
+}
+
+.btn-primary:hover {
+    background: #2980b9
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: #fff
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: #fff
+}
+
+.btn-danger:hover {
+    background: #c0392b
+}
+
+form {
+    margin-top: 20px
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+
+textarea {
+    min-height: 100px
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px
+}
+
+.alert-success {
+    background: #eafaf1;
+    color: #2e7d32
+}
+
+.alert-error {
+    background: #fdecea;
+    color: #c0392b
+}
+
+a {
+    color: #3498db
+}   
