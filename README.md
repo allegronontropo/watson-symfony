@@ -5,6 +5,21 @@ L’objectif est de proposer un socle de fonctionnalités proches du projet *Wat
 
 ---
 
+## Important – Méthodes d’installation et de lancement du projet
+
+Dans ce dépôt, vous trouverez une version finale fonctionnelle du projet Watson basée sur Symfony 6.4,
+utilisable via un **serveur PHP natif** pour une mise en place simple et rapide.
+
+Dans le document de rendu final, une autre méthode d’installation est également présentée, reposant sur
+**SQLite** et des outils complémentaires (Docker, configuration locale spécifique).  
+Cette seconde approche correspond à une phase exploratoire du projet et illustre la démarche de recherche
+et d’expérimentation menée par le groupe.
+
+Le code présent dans ce dépôt correspond à la **version stabilisée** du projet, retenue afin de faciliter
+les tests et la démonstration des fonctionnalités demandées.
+
+---
+
 ## Fonctionnalités (minimum demandé)
 
 - ✅ Listing des liens en base de données
@@ -49,7 +64,14 @@ Exemple (WAMP par défaut, sans mot de passe) :
 DATABASE_URL="mysql://root:@127.0.0.1:3306/uel313?serverVersion=8.0"
 ```
 
+Exemple avec PostgreSQL : 
+```env
+DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
+```
+
 ---
+
+
 
 ## Base de données
 
